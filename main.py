@@ -4,9 +4,12 @@ from arbiter import Arbiter
 from tokens import Token
 from testnet import TestNet
 
+# starting Arbiter network
 abt = Arbiter(1000000)
 init_cap = abt.get_init_cap()
+fund_cap = abt.get_current_cap()
 print('Initial capital of Arbiter fund is: ' + str(init_cap))
+print('Total capital of Arbiter fund is: ' + str(fund_cap))
 
 t = Token(init_cap)
 print('Token released, amount of token is: ' + str(t.INIT_TOKEN_NUM))
